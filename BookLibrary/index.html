@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Library</title>
+    <link rel="stylesheet" type="text/css" href="styles/site.css" />
+    <link rel="stylesheet" type="text/css" href="site.css" />
+    <script src="scripts/jquery-3.0.0.js"></script>
+    <script src="scripts/books-library.js"></script>
+</head>
+<body>
+    <header id="menu">
+        <a href="#" id="linkHome">Home</a>
+        <a href="#" id="linkLogin">Login</a>
+        <a href="#" id="linkRegister">Register</a>
+        <a href="#" id="linkListBooks">List Books</a>
+        <a href="#" id="linkCreateBook">Create Book</a>
+        <a href="#" id="linkLogout">Logout</a>
+    </header>
+
+    <main>
+        <section id="loadingBox">Loading...</section>
+        <section id="infoBox" onclick='$(this).fadeOut()'>Info</section>
+        <section id="errorBox" onclick='$(this).fadeOut()'>Error</section>
+        <section id="viewHome">
+            <h1>Welcome</h1>
+            <div>Welcome to our book library.</div>
+        </section>
+        <section id="viewLogin">
+            <h1>Please Login</h1>
+            <form id="formLogin">
+                <div>Username:</div>
+                <div><input type="text" id="loginUser" required ="true"/></div>
+                <div>Password:</div>
+                <div><input type="password" id="loginPass" required="true"/></div>
+                <div><input type="submit" id="buttonLogin" value="Login"/></div>
+            </form>
+        </section>
+        <section id="viewRegister">
+            <h1>Please register here</h1>
+            <form id="formRegister">
+                <div>Username:</div>
+                <div><input type="text" id="registerUser" required="true"/></div>
+                <div>Password:</div>
+                <div><input type="password" id="registerPass" required="true"/></div>
+                <div><input type="submit" id="buttonRegister" value="Register"/></div>
+            </form>
+        </section>
+        <section id="viewBooks">
+            <h1>Books listing</h1>
+            <div id="books">No Books.</div>
+        </section>
+        <section id="viewCreateBook">
+            <h1>Create new book</h1>
+            <form id="formCreateBook">
+                <div>Title:</div>
+                <div><input type="text" id="bookTitle" required="true"/></div>
+                <div>Author:</div>
+                <div><input type="text" id="bookAuthor" required="true"/></div>
+                <div>Description:</div>
+                <div><textarea id="bookDescription" rows="10" required="true"></textarea></div>
+                <div><input type="submit" id="buttonCreateBook" value="Create Book"/></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>Books Library - Sample Project</footer>
+</body>
+</html>
